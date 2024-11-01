@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 const PORT = 5000;
-const API_KEY = process.env.API_KEY;  // Use API_KEY from the .env file
+const API_KEY = process.env.API_KEY;  
 
 app.use(express.json());
 
@@ -89,7 +89,7 @@ app.delete('/books/:isbn', (req, res) => {
     res.status(204).end();
 });
 
-// Create HTTP server and listen on port
+
 const server = http.createServer(app);
 server.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
